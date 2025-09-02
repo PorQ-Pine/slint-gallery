@@ -16,7 +16,18 @@ path = "main.rs"
 name = "gallery"
 
 [dependencies]
-slint = { path = "../../api/rs/slint", features = ["gettext"] }
+slint = { git = "https://github.com/PorQ-Pine/slint.git", features = ["gettext", "log"], default-features = false }
 
 [build-dependencies]
-slint-build = { path = "../../api/rs/build" }
+slint-build = { git = "https://github.com/PorQ-Pine/slint.git" }
+
+[features]
+host = [
+    "slint/accessibility",
+    "slint/backend-default",
+    "slint/compat-1-2",
+    "slint/renderer-femtovg",
+    "slint/renderer-software",
+    "slint/std",
+]
+pinenote = ["slint/compat-1-2", "slint/backend-linuxkms-noseat", "slint/libm", "slint/renderer-software"]
