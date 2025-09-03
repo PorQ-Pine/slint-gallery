@@ -3,7 +3,7 @@
 
 [package]
 name = "gallery"
-version = "1.13.0"
+version = "1.0.0"
 authors = ["Slint Developers <info@slint.dev>"]
 edition = "2021"
 build = "build.rs"
@@ -16,10 +16,10 @@ path = "main.rs"
 name = "gallery"
 
 [dependencies]
-slint = { git = "https://github.com/PorQ-Pine/slint.git", features = ["log"], default-features = false }
+slint = { git = "https://github.com/slint-ui/slint.git", tag = "v1.12.1", features = ["log"], default-features = false }
 
 [build-dependencies]
-slint-build = { git = "https://github.com/PorQ-Pine/slint.git" }
+slint-build = { git = "https://github.com/slint-ui/slint.git", tag = "v1.12.1" }
 
 [features]
 host = [
@@ -30,4 +30,5 @@ host = [
     "slint/renderer-software",
     "slint/std",
 ]
-pinenote = ["slint/compat-1-2", "slint/backend-linuxkms-noseat", "slint/libm", "slint/renderer-software"]
+pinenote_rootfs = ["slint/std", "slint/compat-1-2", "slint/backend-linuxkms-noseat", "slint/renderer-femtovg"]
+pinenote_initrd = ["slint/compat-1-2", "slint/backend-linuxkms-noseat", "slint/libm", "slint/renderer-software"]
