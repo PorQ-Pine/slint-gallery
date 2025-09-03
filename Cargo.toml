@@ -16,7 +16,7 @@ path = "main.rs"
 name = "gallery"
 
 [dependencies]
-slint = { git = "https://github.com/PorQ-Pine/slint.git", features = ["gettext", "log"], default-features = false }
+slint = { git = "https://github.com/PorQ-Pine/slint.git", features = ["log"], default-features = false }
 
 [build-dependencies]
 slint-build = { git = "https://github.com/PorQ-Pine/slint.git" }
