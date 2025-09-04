@@ -16,10 +16,10 @@ path = "main.rs"
 name = "gallery"
 
 [dependencies]
-slint = { git = "https://github.com/slint-ui/slint.git", tag = "v1.12.1", features = ["log"], default-features = false }
+slint = { git = "https://github.com/slint-ui/slint.git", rev = "42c683ce2865889eb17848b744c1b941c073ad57", features = ["log"], default-features = false }
 
 [build-dependencies]
-slint-build = { git = "https://github.com/slint-ui/slint.git", tag = "v1.12.1" }
+slint-build = { git = "https://github.com/slint-ui/slint.git", rev = "42c683ce2865889eb17848b744c1b941c073ad57" }
 
 [features]
 host = [
