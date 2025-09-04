@@ -31,4 +31,4 @@ host = [
     "slint/std",
 ]
 pinenote_rootfs = ["slint/std", "slint/compat-1-2", "slint/backend-linuxkms-noseat", "slint/renderer-femtovg"]
-pinenote_initrd = ["slint/compat-1-2", "slint/backend-linuxkms-noseat", "slint/libm", "slint/renderer-software"]
+pinenote_initrd = ["slint/std", "slint/compat-1-2", "slint/backend-linuxkms-noseat", "slint/renderer-software"]
